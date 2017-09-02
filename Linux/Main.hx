@@ -15,7 +15,7 @@ class Main {
 		
 		// Load lib
 		untyped __cpp__('void* handle = dlopen("./libCppDynaLibTest.so", RTLD_LAZY);');
-		untyped __cpp__('if (!handle) { std::cerr << "Cannot open library: " << dlerror() << std::endl; return 1; }');
+		untyped __cpp__('if (!handle) { std::cerr << "Cannot open library: " << dlerror() << std::endl; }');
 
 		// Load function
 		untyped __cpp__('times_two_t times_two = (times_two_t) dlsym(handle, "times_two");');
