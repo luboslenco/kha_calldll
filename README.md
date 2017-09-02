@@ -12,12 +12,12 @@ Afterwards, the function is [called from Haxe](https://github.com/luboslenco/kha
 
 ```hx
 static function callDll():Int {
-		// ...
-		untyped __cpp__('hinstLib = LoadLibrary(TEXT("Win32Project1.dll"));');
-		untyped __cpp__('procAddr = (MYPROC)GetProcAddress(hinstLib, "testFunction");');
-		var result = 0;
-		untyped __cpp__('result = (procAddr)();');
-		// ...
+	// ...
+	untyped __cpp__('hinstLib = LoadLibrary(TEXT("Win32Project1.dll"));');
+	untyped __cpp__('procAddr = (MYPROC)GetProcAddress(hinstLib, "testFunction");');
+	var result = 0;
+	untyped __cpp__('result = (procAddr)();');
+	// ...
 }
 ```
 
